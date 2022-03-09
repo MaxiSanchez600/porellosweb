@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./Map.scss";
-import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { URL_API_GOOGLE_MAPS } from "../../../Config/env/env";
 import { contextFeeders } from "../../Context/ReactContext";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import { FeedersWithReport } from "../../../Config/typescript/interfaces";
+import MarkerWithInfo from "./MarkerWithInfo";
+import { Modal } from "@nextui-org/react";
+import Loading from "../../../Config/images/loading.svg";
 
 const containerStyle = {
   maxWidth: "1200px",
@@ -16,12 +18,12 @@ export default function Map() {
   const { feedersList, setSelectedFeeder, selectedFeeder } =
     useContext(contextFeeders);
 
-  console.log(feedersList);
-
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: URL_API_GOOGLE_MAPS,
   });
+
+  const [isImgPopUpOpen, setIsImgPopUpOpen] = useState<boolean>(false);
 
   const [center, setCenter] = useState<{
     lat: number;
@@ -67,26 +69,65 @@ export default function Map() {
             zoom={12}
             onLoad={onLoad}
             onUnmount={onUnmount}
+            options={{
+              disableDefaultUI: true,
+              styles: [
+                {
+                  featureType: "administrative.land_parcel",
+                  elementType: "labels",
+                  stylers: [
+                    {
+                      visibility: "off",
+                    },
+                  ],
+                },
+                {
+                  featureType: "poi",
+                  elementType: "labels.text",
+                  stylers: [
+                    {
+                      visibility: "off",
+                    },
+                  ],
+                },
+                {
+                  featureType: "road.local",
+                  elementType: "labels",
+                  stylers: [
+                    {
+                      visibility: "off",
+                    },
+                  ],
+                },
+              ],
+            }}
           >
             {feedersList.map((feeder) => {
               return (
-                <AnchorLink href="#feederInfo">
-                  <Marker
-                    position={{
-                      lat: parseFloat(feeder.latitude),
-                      lng: parseFloat(feeder.longitude),
-                    }}
-                    onClick={() => onMarkerClick(feeder)}
-                  ></Marker>
-                </AnchorLink>
+                <MarkerWithInfo
+                  feeder={feeder}
+                  onMarkerClick={onMarkerClick}
+                  setIsImgPopUpOpen={setIsImgPopUpOpen}
+                />
               );
             })}
             <></>
           </GoogleMap>
         ) : (
-          <>Setear un Loading Gif</>
+          <img alt="Loading" src={Loading} />
         )}
       </div>
+      <Modal
+        closeButton
+        onClose={() => setIsImgPopUpOpen(false)}
+        open={isImgPopUpOpen}
+      >
+        <img
+          className="mapImg_map"
+          alt="feederImg"
+          src={selectedFeeder?.FeederReport.img}
+        ></img>
+      </Modal>
     </div>
   );
 }

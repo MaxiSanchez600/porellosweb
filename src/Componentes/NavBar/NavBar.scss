@@ -27,6 +27,7 @@
   position: relative;
 
   .navbarlogo_navbar {
+    font-weight: 900;
     cursor: pointer;
     text-decoration: none;
     font-size: 1.1rem;
@@ -42,6 +43,16 @@
 
   .mobilemenu_navbar {
     opacity: 0;
+    @include tablet {
+      cursor: pointer;
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      z-index: 9999;
+      font-size: 2rem;
+      color: $dark;
+    }
   }
 
   .navbarelements_navbar {
@@ -49,7 +60,12 @@
     list-style: none;
     text-align: center;
     margin-right: 24px;
+
+    @include tablet {
+      display: none;
+    }
     .listitem_navbar {
+      cursor: pointer;
       text-decoration: none;
       color: $dark;
       @extend %align-center;
@@ -65,6 +81,7 @@
 
 .mobilenavbar_navbar {
   display: flex;
+  z-index: 9999;
   height: 100vh;
   position: absolute;
   width: 100%;
@@ -87,6 +104,7 @@
     flex-direction: column;
     align-items: center;
     .listitem_navbarmobile {
+      text-align: center;
       color: $light;
       text-decoration: none;
       font-size: 1.8rem;

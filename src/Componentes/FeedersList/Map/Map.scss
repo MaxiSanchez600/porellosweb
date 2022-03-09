@@ -7,6 +7,14 @@
     display: flex;
     justify-content: center;
   }
+  .infoWindow_map {
+    h1 {
+      font-size: 1.5em;
+    }
+    p {
+      text-align: center;
+    }
+  }
   h2 {
     font-weight: 100;
     font-size: 2.3rem;
@@ -29,4 +37,8 @@
       font-size: 1.5rem;
     }
   }
+}
+
+.mapImg_map {
+  margin-top: 2em;
 }

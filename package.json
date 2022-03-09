@@ -1,5 +1,5 @@
 {
-  "name": "countryclick",
+  "name": "porellos",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,6 +16,7 @@
     "@types/react-dom": "^17.0.9",
     "@types/react-router": "^5.1.16",
     "axios": "^0.21.1",
+    "dotenv": "^16.0.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-anchor-link-smooth-scroll": "^1.0.12",

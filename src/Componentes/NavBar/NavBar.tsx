@@ -21,10 +21,18 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
           />
           <div>
-            <Link className="listitem_navbarmobile" to="/">
+            <Link
+              onClick={() => setOpen(!open)}
+              className="listitem_navbarmobile"
+              to="/"
+            >
               Home
             </Link>
-            <Link className="listitem_navbarmobile" to="/agregar">
+            <Link
+              onClick={() => setOpen(!open)}
+              className="listitem_navbarmobile"
+              to="/agregar"
+            >
               Agrega un comedero
             </Link>
           </div>

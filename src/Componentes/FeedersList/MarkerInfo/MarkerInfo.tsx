@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import "./MarkerInfo.scss";
 import { contextFeeders } from "../../Context/ReactContext";
-import { Card, Divider, Text } from "@nextui-org/react";
+import { Button, Card, Divider, Text } from "@nextui-org/react";
 import { getStatusDescription, getStatusColor } from "../../../Helpers/status";
 
 export default function MarkerInfo() {
   const { selectedFeeder } = useContext(contextFeeders);
 
   return (
-    <div className="markerInfo_Container">
+    <div className="markerInfo_Container" id="markerInfo">
       {selectedFeeder && (
         <Card hoverable>
           <div className="markerInfo_CardItemsContainer">

@@ -8,6 +8,7 @@ import {
   Route,
   Switch,
   Redirect,
+  HashRouter,
 } from "react-router-dom";
 
 import ContextProvider from "./Componentes/Context/ReactContext";
@@ -40,7 +41,7 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
       <ContextProvider>
-        <Router>
+        <HashRouter>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Main}></Route>
@@ -52,7 +53,7 @@ function App() {
             <Route component={NotFound}> </Route>
           </Switch>
           <Footer />
-        </Router>
+        </HashRouter>
       </ContextProvider>
     </NextUIProvider>
   );

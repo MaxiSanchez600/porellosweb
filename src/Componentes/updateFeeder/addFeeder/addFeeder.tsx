@@ -235,6 +235,38 @@ export default function AddFeeder() {
               zoom={12}
               onLoad={onLoad}
               onUnmount={onUnmount}
+              options={{
+                disableDefaultUI: true,
+                styles: [
+                  {
+                    featureType: "administrative.land_parcel",
+                    elementType: "labels",
+                    stylers: [
+                      {
+                        visibility: "off",
+                      },
+                    ],
+                  },
+                  {
+                    featureType: "poi",
+                    elementType: "labels.text",
+                    stylers: [
+                      {
+                        visibility: "off",
+                      },
+                    ],
+                  },
+                  {
+                    featureType: "road.local",
+                    elementType: "labels",
+                    stylers: [
+                      {
+                        visibility: "off",
+                      },
+                    ],
+                  },
+                ],
+              }}
             >
               {latLng && <Marker position={latLng} />}
             </GoogleMap>

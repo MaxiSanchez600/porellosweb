@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./agregarinfo.scss";
 import { Button } from "@nextui-org/react";
 import { Input, Textarea } from "@nextui-org/react";
-
+import box from "../../Config/images/box.png";
 export default function AgregarInfo() {
   const [name, setName] = useState<string>("");
   const [mail, setMail] = useState<string>("");
@@ -68,6 +68,7 @@ export default function AgregarInfo() {
           </h2>
         </div>
         <div className="RigthContainer_right_ainfo">
+          <img alt="porellos_package" src={box}></img>
           {/* <div className="up_right_ainfo">
             <div>
               <Input
@@ -109,19 +110,20 @@ export default function AgregarInfo() {
               Enviar
             </Button>
           </div> */}
-          <div className="wp_right_ainfo">
-            <h3>
-              <a
-                href="https://wa.link/kyeuqh"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Contactate con nosotros por nuestras redes sociales o por
-                directamente por WhatsApp haciendo <span>clikeando aqui</span>
-              </a>
-            </h3>
-          </div>
         </div>
+      </div>
+      <div className="wp_right_ainfo">
+        <h3>
+          <a
+            href="https://wa.link/kyeuqh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contactate con nosotros a <b>porelloscomederos@gmail.com</b>, por
+            nuestras redes sociales o directamente por WhatsApp haciendo{" "}
+            <span>clikeando aqui</span>
+          </a>
+        </h3>
       </div>
     </div>
   );

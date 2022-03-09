@@ -1,5 +1,6 @@
 import "./Video.scss";
-import { Button, Link } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
+import { Link } from "react-router-dom";
 
 export default function Video() {
   return (
@@ -15,12 +16,12 @@ export default function Video() {
         </div>
         <div className="rigthContainer_video"></div>
       </div>
-      <div className="wp_right_ainfo">
+      <div className="wp_right_ainfo_video">
         <h3>
           ¿Sabias que podes poner un <span>comedero</span> donde quieras y que
           aparezca en la web?
         </h3>
-        <Link href="/agregar">
+        <Link to="/agregar">
           {" "}
           <Button>Aprende como</Button>
         </Link>

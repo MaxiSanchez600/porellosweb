@@ -19,6 +19,7 @@ export default function Hero() {
           <AnchorLink href="#things">
             <Button
               iconRight={<Location stroke="bold" set="curved" />}
+              style={{ zIndex: 1 }}
               color="primary"
               // css={{ width: "240px" }}
             >

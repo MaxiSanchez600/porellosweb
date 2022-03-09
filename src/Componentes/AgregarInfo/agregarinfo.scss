@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    min-height: 80vh;
+    min-height: 70vh;
     z-index: 1;
     width: 100%;
     max-width: 1200px;
@@ -98,7 +98,11 @@
     .RigthContainer_right_ainfo {
       display: flex;
       flex-direction: column;
-      width: 90%;
+      display: flex;
+      align-items: center;
+      img {
+        width: 80%;
+      }
       .up_right_ainfo {
         display: flex;
         justify-content: space-around;
@@ -127,27 +131,37 @@
       font-weight: 600;
     }
   }
-  .wp_right_ainfo {
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    h3 {
-      font-size: 1.2em;
-      font-weight: 100;
-    }
-    a {
-      color: black;
-    }
-    span {
-      font-weight: 900;
-      text-decoration: underline;
-      color: $darkblue;
-    }
-  }
+
   .HeroContainerDown_ainfo {
     background-color: $light;
+  }
+}
+
+.wp_right_ainfo {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px;
+  @include mobile {
+    margin-top: 3em;
+  }
+  h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 100;
+    @include mobile {
+      font-size: 1em;
+    }
+  }
+  a {
+    color: black;
+  }
+  span {
+    font-weight: 900;
+    text-decoration: underline;
+    color: $darkblue;
   }
 }

@@ -46,9 +46,6 @@ export default function FeedersList() {
               actual
             </h2>
             <Map></Map>
-            <div className="feedersList_feederInfoContainer" id="feederInfo">
-              <MarkerInfo></MarkerInfo>
-            </div>
           </>
         )}
       </div>
