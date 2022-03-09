@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Bluebuff123
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  api:
+    image: maxi600/porellos:main
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_USER=postgres
+      - DB_PASS=Bluebuff123
+      - DB_HOST=db
+      - DB_NAME=postgres
+      - DEV_ENV=local
+    ports:
+      - "8000:8000"
+  client:
+    stdin_open: true
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000/
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+volumes:
+  db:
+    driver: local
