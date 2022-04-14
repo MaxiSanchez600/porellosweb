@@ -42,7 +42,7 @@ export default function FeedersList() {
           <>
             <h1>Nuestros comederos</h1>
             <h2>
-              Clickea cada uno en el mapa para ver su informacion y estado
+              Clickeá cada uno en el mapa para ver su información y estado
               actual
             </h2>
             <Map></Map>

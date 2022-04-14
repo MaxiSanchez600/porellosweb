@@ -7,7 +7,7 @@ export default function Video() {
     <div className="videoContainer_video">
       <div className="videoSubContainer_video">
         <div className="leftContainer_video">
-          <h1>¿Todavia tenes alguna duda?</h1>
+          <h1>Todavía tenes alguna duda?</h1>
           <h2>
             Te dejamos nuestro video promocional donde se explica en vida real
             con uno de
@@ -18,12 +18,12 @@ export default function Video() {
       </div>
       <div className="wp_right_ainfo_video">
         <h3>
-          ¿Sabias que podes poner un <span>comedero</span> donde quieras y que
+          ¿Sabías qué podés poner un <span>comedero</span> donde quieras y que
           aparezca en la web?
         </h3>
         <Link to="/agregar">
           {" "}
-          <Button>Aprende como</Button>
+          <Button>Aprendé cómo</Button>
         </Link>
       </div>
     </div>

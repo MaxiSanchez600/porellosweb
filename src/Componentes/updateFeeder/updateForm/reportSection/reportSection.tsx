@@ -74,7 +74,7 @@ export default function ReportSection() {
           }
         } else {
           setDescriptionError(
-            "La descripcion debe ser mas larga a 20 caracteres y menor a 60."
+            "La descripción debe ser mas larga a 20 caracteres y menor a 60."
           );
         }
       } else {
@@ -101,7 +101,7 @@ export default function ReportSection() {
           <div></div>
           <Textarea
             label="Nueva descripcion"
-            placeholder="ej: Lo encontre sin comida mientras caminaba por la plaza, reporto para que alguien pueda verlo en la web y llenarlo."
+            placeholder="ej: Lo encontré sin comida mientras caminaba por la plaza, reporto para que alguien pueda verlo en la web y llenarlo."
             value={descripcion}
             onChange={(e) => onDescriptionChange(e.target.value)}
           />
@@ -109,15 +109,15 @@ export default function ReportSection() {
           <div>
             <Radio.Group onChange={(e) => onStatusChange(e as StatusValue)}>
               <Radio value={StatusValue.FOOD_UPDATE_NO_FILL}>
-                Lo encontre sin comida
+                Lo encontré sin comida
                 <Radio.Description>
-                  Selecciona esta opcion si lo encontraste sin comida.
+                  Seleccioná esta opción si lo encontraste sin comida.
                 </Radio.Description>
               </Radio>
               <Radio value={StatusValue.PROBLEM}>
                 Tiene algun problema
                 <Radio.Description>
-                  Selecciona esta opcion si el bebedero tiene algun problema o
+                  Seleccioná esta opción si el bebedero tiene algun problema o
                   falla.
                 </Radio.Description>
               </Radio>
