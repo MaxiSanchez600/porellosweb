@@ -12,7 +12,7 @@ export default function UpdateForm() {
       {!selectedOption && (
         <div className="updateForm_subContainer">
           <h1>¡Gracias por aportar tu granito de arena!</h1>
-          <h2>Selecciona una accion para continuar</h2>
+          <h2>Seleccioná una acción para continuar</h2>
           <div className="updateForm_actionsContainer">
             <div>
               <Button
@@ -22,8 +22,8 @@ export default function UpdateForm() {
                 Reportar estado
               </Button>
               <p>
-                <span>Clickea aca</span> para reportar que lo encontraste sin
-                comida o si tuvo algun problema (se mojo, se rompio, se trabo,
+                <span>Clickeá acá</span> para reportar que lo encontraste sin
+                comida o si tuvo algun problema (se mojó, se rompió, se trabó,
                 etc)
               </p>
             </div>
@@ -32,8 +32,8 @@ export default function UpdateForm() {
                 Actualizar estado
               </Button>
               <p>
-                <span>Clickea aca</span> para actualizar si lo llenaste con
-                comida o si solucionaste el problema que tenia.
+                <span>Clickeá acá</span> para actualizar si lo llenaste con
+                comida o si solucionaste el problema que tenía.
               </p>
             </div>
           </div>

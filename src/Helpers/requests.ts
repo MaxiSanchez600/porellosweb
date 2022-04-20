@@ -4,6 +4,7 @@ import {
   API_RESPONSE_GET_FEEDERS,
   API_RESPONSE_GET_FEEDER_BY_IP,
   API_RESPONSE_UPDATE_REPORT,
+  emailRequest,
   FeederReport,
   FeedersWithReport,
 } from "../Config/typescript/interfaces";
@@ -39,4 +40,10 @@ export const uploadPicture = async (data: FormData) => {
     `https://api.cloudinary.com/v1_1/${IMAGE_CLOUD}/image/upload`,
     data
   );
+};
+
+export const sendEmail = async (emailUpdateData: emailRequest) => {
+  return await axios.post(URL_API + "api/beta/v1/update/email", {
+    data: emailUpdateData,
+  });
 };

@@ -50,7 +50,7 @@ export default function UpdateFeeder() {
         ) : (
           <h1 className="updateFeeder_noFeederH1">
             No existen bebederos con ese{" "}
-            <span className="updateFeeder_noFeederSpan">codigo</span>
+            <span className="updateFeeder_noFeederSpan">código</span>
           </h1>
         )}
       </div>

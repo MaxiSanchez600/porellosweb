@@ -139,7 +139,7 @@ export function getNewStatus(
 export function getStatusDescription(status: Status) {
   switch (status) {
     case Status.OK:
-      return "El comedero se encuentra con comida y agua";
+      return "El comedero se encuentra con comida";
     case Status.NO_OK:
       return "El comedero se encuentra con algun problema";
     case Status.FOOD_MISSING:
@@ -147,7 +147,7 @@ export function getStatusDescription(status: Status) {
     case Status.WATER_MISSING:
       return "Al comedero le falta agua";
     case Status.FW_MISSING:
-      return "Al comedero le falta comida y agua";
+      return "Al comedero le falta comida";
   }
 }
 

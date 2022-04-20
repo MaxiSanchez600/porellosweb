@@ -43,7 +43,14 @@ export default function MarkerWithInfo(props: Props) {
           onCloseClick={() => isOpen(false)}
         >
           <div className="infoWindow_map">
-            <h1 className="infoWindow_title">📍 {feeder.location}</h1>
+            <h1
+              style={{
+                color: "#423e28",
+              }}
+              className="infoWindow_title"
+            >
+              📍 {feeder.location}
+            </h1>
             <p className="infoWindow_desc">{feeder.description}</p>
             <p
               style={{

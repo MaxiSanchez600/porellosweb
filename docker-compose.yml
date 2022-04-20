@@ -26,15 +26,6 @@ services:
       - DEV_ENV=local
     ports:
       - "8000:8000"
-  client:
-    stdin_open: true
-    environment:
-      - REACT_APP_API_URL=http://localhost:8000/
-    build: .
-    ports:
-      - "3000:3000"
-    depends_on:
-      - api
 volumes:
   db:
     driver: local

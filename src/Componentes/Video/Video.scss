@@ -59,15 +59,17 @@
         }
       }
     }
-    .rigthContainer_videot {
+    .rigthContainer_video {
       text-align: center;
-      img {
-        height: 100%;
+      iframe {
+        height: 300px;
         width: 100%;
       }
     }
   }
   .wp_right_ainfo_video {
+    margin-top: 1em;
+    background-color: $green;
     min-height: 20vh;
     display: flex;
     flex-direction: column;
@@ -76,6 +78,7 @@
     width: 100%;
     padding: 24px;
     h3 {
+      color: white;
       font-size: 1.2em;
       font-weight: 100;
       text-align: center;

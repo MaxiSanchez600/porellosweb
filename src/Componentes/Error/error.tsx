@@ -7,9 +7,9 @@ export default function Error() {
       <div>
         <img src={ErrorPic} alt="Error" />
         <h1>
-          Ocurrio un <span>error de red</span>
+          Ocurrió un <span>error de red</span>
         </h1>
-        <h2>Estas cosas suelen pasar, porfavor proba de nuevo</h2>
+        <h2>Estas cosas suelen pasar, porfavor probá de nuevo</h2>
       </div>
     </div>
   );

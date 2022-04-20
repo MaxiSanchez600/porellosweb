@@ -3,7 +3,7 @@
 
 .feederContainer_container {
   margin-top: 3em;
-  background-color: $light;
+  background-color: $green;
   padding: 24px;
   @include mobile {
     margin-top: 5em;
@@ -15,7 +15,7 @@
     h1 {
       font-size: 2.3em;
       text-align: center;
-      color: $green;
+      color: $light;
       text-decoration: underline;
       @include mobile {
         font-size: 1.5em;
@@ -24,6 +24,7 @@
     h2 {
       font-size: 1.5em;
       text-align: center;
+      color: $light;
       @include mobile {
         font-size: 1em;
       }

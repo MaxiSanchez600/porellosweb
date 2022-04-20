@@ -43,3 +43,8 @@ export interface API_RESPONSE_UPDATE_REPORT {
   status: number;
   error: string;
 }
+
+export interface emailRequest {
+  email: string;
+  ids: string[];
+}
