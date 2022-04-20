@@ -1,6 +1,7 @@
 import "./Video.scss";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import InstagramEmbed from "react-instagram-embed";
 
 export default function Video() {
   return (
@@ -14,7 +15,9 @@ export default function Video() {
             <span> nuestros comederos.</span>
           </h2>
         </div>
-        <div className="rigthContainer_video"></div>
+        <div className="rigthContainer_video">
+          <iframe src="https://www.youtube.com/embed/TdefPiiTaKM"></iframe>
+        </div>
       </div>
       <div className="wp_right_ainfo_video">
         <h3>
