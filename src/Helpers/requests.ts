@@ -43,7 +43,7 @@ export const uploadPicture = async (data: FormData) => {
 };
 
 export const sendEmail = async (emailUpdateData: emailRequest) => {
-  return await axios.post(URL_API + "api/beta/v1/update/email", {
+  return await axios.put(URL_API + "api/beta/v1/update/email", {
     data: emailUpdateData,
   });
 };
