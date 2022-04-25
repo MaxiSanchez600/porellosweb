@@ -1,26 +1,25 @@
-@import "../../Config/variables.scss";
-@import "../../Config/mixins/mediaqueriesReal.scss";
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesReal.scss";
 
-.HeroContainer_ainfo {
+.HeroContainer_PrimerPaso {
   background-color: $light;
-  .heroCont_ainfo {
-    padding-right: 24px;
-    padding-left: 24px;
+  .heroCont_PrimerPaso {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    min-height: 70vh;
+    min-height: 60vh;
     z-index: 1;
     width: 100%;
     max-width: 1200px;
-
+    padding-right: 24px;
+    padding-left: 24px;
     @include tablet {
       grid-template-columns: 1fr;
       height: 100%;
     }
-    .LeftContainer_ainfo {
+    .LeftContainer_PrimerPaso {
       width: 90%;
       line-height: 1.2;
 
@@ -37,7 +36,7 @@
         color: $green;
 
         @include mobile {
-          font-size: 1.5rem;
+          font-size: 1.8rem;
         }
       }
 
@@ -59,7 +58,7 @@
           }
         }
       }
-      .btn_ainfo {
+      .btn_PrimerPaso {
         font-size: 1rem;
         background-color: $darkblue;
         padding: 14px 32px;
@@ -72,42 +71,20 @@
         transition: all 0.3s;
         outline: none;
       }
-
-      .btn_ainfo p {
-        position: relative;
-        z-index: 2;
-        color: $light;
-        text-decoration: none;
-      }
-
-      .btn_ainfo:after {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background: $green;
-        transition: all 0.3s;
-        border-radius: 4px;
-      }
-
-      .btn_ainfo:hover:after {
-        width: 100%;
-      }
     }
-    .RigthContainer_right_ainfo {
+    .RigthContainer_right_PrimerPaso {
       display: flex;
       flex-direction: column;
       display: flex;
       align-items: center;
-      img {
-        width: 80%;
+      text-align: center;
+      iframe {
+        height: 300px;
+        width: 100%;
       }
-      .up_right_ainfo {
+      .up_right_PrimerPaso {
         display: flex;
         justify-content: space-around;
-        margin-bottom: 3em;
         div {
           @include mobile {
             width: 100%;
@@ -121,7 +98,7 @@
           flex-direction: column;
         }
       }
-      .down_right_ainfo {
+      .down_right_PrimerPaso {
         display: flex;
         flex-direction: column;
       }
@@ -133,39 +110,14 @@
     }
   }
 
-  .HeroContainerDown_ainfo {
+  .HeroContainerDown_PrimerPaso {
     background-color: $light;
   }
-}
 
-.wp_right_ainfo {
-  min-height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  @include mobile {
-    margin-top: 3em;
-    padding-right: 24px;
-    padding-left: 24px;
-  }
-  h3 {
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 100;
-    @include mobile {
-      font-size: 1em;
+  .buttonContainer_PrimerPaso {
+    @include tablet {
+      margin-top: 1em;
     }
-  }
-  a {
-    color: black;
-  }
-  span {
-    font-weight: 900;
-    text-decoration: underline;
-    color: $darkblue;
   }
 }
 

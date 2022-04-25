@@ -1,0 +1,114 @@
+@import "../../../Config/variables.scss";
+@import "../../../Config/mixins/mediaqueriesReal.scss";
+
+.HeroContainer_TercerPaso {
+  background-color: $light;
+  .heroCont_TercerPaso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 60vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+    .LeftContainer_TercerPaso {
+      width: 90%;
+      line-height: 1.2;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: $green;
+
+        @include mobile {
+          font-size: 1.8rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: $dark;
+        font-weight: 100;
+        margin-top: 1rem;
+        @include mobile {
+          font-size: 1rem;
+        }
+        span {
+          font-size: 1.3rem;
+          color: $green;
+          font-weight: 800;
+          margin-top: 1rem;
+          @include mobile {
+            font-size: 1rem;
+          }
+        }
+      }
+      .btn_TercerPaso {
+        font-size: 1rem;
+        background-color: $darkblue;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        color: $light;
+        margin-top: 2rem;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s;
+        outline: none;
+      }
+    }
+    .RigthContainer_right_TercerPaso {
+      display: flex;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      img {
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .HeroContainerDown_TercerPaso {
+    background-color: $light;
+  }
+
+  .buttonContainer_TercerPaso {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-right: 24px;
+    padding-left: 24px;
+    @include tablet {
+      margin-top: 1em;
+    }
+    @include mobile {
+      height: 10vh;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
+
+.itemList_AgregarInfo {
+  list-style-type: circle;
+}
